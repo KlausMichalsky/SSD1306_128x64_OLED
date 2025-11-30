@@ -1,3 +1,14 @@
+"""
+/************************************************************************************************************
+ 🔹 LECTURA DE ÁNGULO CON AS5600 vía I2C (Wire1), imprimir en OLED 🔹
+  - Lee el ángulo del sensor AS5600 conectado a GP26 (SDA) y GP27 (SCL) usando I2C.
+  - Convierte el valor crudo de 12 bits (0–4095) a grados (0°–360°).
+  - Manda el angulo actual al OLED SSD1306 cada 200 ms.
+  - Usa Wire1 para I2C independiente de los pines por defecto.
+  K. Michalsky – 11.2025
+*************************************************************************************************************/
+"""
+
 from machine import UART, Pin, I2C
 import utime
 from ssd1306 import SSD1306_I2C
