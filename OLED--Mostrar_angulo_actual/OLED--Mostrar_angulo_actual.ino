@@ -51,9 +51,9 @@ void loop()
 
     // Manda angulo al Pico con un decimal
     Serial1.print("Ángulo: ");
-    Serial1.print(degrees, 1);
+    Serial1.print(degrees);
 
-    delay(200); // Espera 200 ms antes de siguiente lectura
+    delay(500); // Espera 500 ms antes de siguiente lectura
 }
 
 // ----------------------------------------------------------------------------------------------------------

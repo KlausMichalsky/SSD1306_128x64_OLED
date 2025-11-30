@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#line 1 "/Users/klausmichalsky/Proyectos/#Github repositories/SSD1306_128x64_OLED/OLED--Mostrar_angulo_actual/OLED--Mostrar_angulo_actual.ino"
+#line 1 "C:\\Users\\Benutzer1\\Documents\\Arduino\\SSD1306_128x64_OLED\\OLED--Mostrar_angulo_actual\\OLED--Mostrar_angulo_actual.ino"
 /************************************************************************************************************
  🔹 LECTURA DE ÁNGULO CON AS5600 vía I2C (Wire1), imprimir en OLED 🔹
   - Lee el ángulo del sensor AS5600 conectado a GP26 (SDA) y GP27 (SCL) usando I2C.
@@ -22,13 +22,13 @@
 // ------------------------------------
 // SETUP
 // ------------------------------------
-#line 23 "/Users/klausmichalsky/Proyectos/#Github repositories/SSD1306_128x64_OLED/OLED--Mostrar_angulo_actual/OLED--Mostrar_angulo_actual.ino"
+#line 23 "C:\\Users\\Benutzer1\\Documents\\Arduino\\SSD1306_128x64_OLED\\OLED--Mostrar_angulo_actual\\OLED--Mostrar_angulo_actual.ino"
 void setup();
-#line 42 "/Users/klausmichalsky/Proyectos/#Github repositories/SSD1306_128x64_OLED/OLED--Mostrar_angulo_actual/OLED--Mostrar_angulo_actual.ino"
+#line 42 "C:\\Users\\Benutzer1\\Documents\\Arduino\\SSD1306_128x64_OLED\\OLED--Mostrar_angulo_actual\\OLED--Mostrar_angulo_actual.ino"
 void loop();
-#line 63 "/Users/klausmichalsky/Proyectos/#Github repositories/SSD1306_128x64_OLED/OLED--Mostrar_angulo_actual/OLED--Mostrar_angulo_actual.ino"
+#line 64 "C:\\Users\\Benutzer1\\Documents\\Arduino\\SSD1306_128x64_OLED\\OLED--Mostrar_angulo_actual\\OLED--Mostrar_angulo_actual.ino"
 uint16_t readAS5600Angle();
-#line 23 "/Users/klausmichalsky/Proyectos/#Github repositories/SSD1306_128x64_OLED/OLED--Mostrar_angulo_actual/OLED--Mostrar_angulo_actual.ino"
+#line 23 "C:\\Users\\Benutzer1\\Documents\\Arduino\\SSD1306_128x64_OLED\\OLED--Mostrar_angulo_actual\\OLED--Mostrar_angulo_actual.ino"
 void setup()
 {
     Serial.begin(115200);  // Comunicación Serial USB
@@ -58,10 +58,11 @@ void loop()
     Serial.print(degrees);
     Serial.println("°");
 
-    // Manda angulo al Pico
+    // Manda angulo al Pico con un decimal
+    Serial1.print("Ángulo: ");
     Serial1.print(degrees);
 
-    delay(200); // Espera 200 ms antes de siguiente lectura
+    delay(500); // Espera 500 ms antes de siguiente lectura
 }
 
 // ----------------------------------------------------------------------------------------------------------
