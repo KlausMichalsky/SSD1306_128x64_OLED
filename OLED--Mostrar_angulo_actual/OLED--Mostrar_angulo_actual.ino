@@ -49,8 +49,9 @@ void loop()
     Serial.print(degrees);
     Serial.println("°");
 
-    // Manda angulo al Pico
-    Serial1.print(degrees);
+    // Manda angulo al Pico con un decimal
+    Serial1.print("Ángulo: ");
+    Serial1.print(degrees, 1);
 
     delay(200); // Espera 200 ms antes de siguiente lectura
 }

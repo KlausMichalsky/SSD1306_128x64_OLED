@@ -9,6 +9,8 @@ uart = UART(0, baudrate=115200, tx=Pin(0), rx=Pin(1))
 i2c = I2C(0, scl=Pin(5), sda=Pin(4), freq=400000)
 oled = SSD1306_I2C(128, 64, i2c)
 
+degrees = "0"
+
 
 # Función para mostrar en OLED
 def mostrar(texto1, texto2):
